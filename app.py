@@ -50,4 +50,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=DEVELOPMENT_ENV)
+    app.run(debug=False, host='0.0.0.0')
