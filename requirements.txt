@@ -1,0 +1,6 @@
+flask 
+folium
+folium_jsbutton
+rioxarray
+earthpy
+seaborn 
