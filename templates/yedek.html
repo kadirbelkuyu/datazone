@@ -1,0 +1,464 @@
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>DataZone -  Project</title>
+
+    <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">-->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
+</head>
+
+<body class="text-center"><style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
+</head>
+    <div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">DataZone</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="">Home</a>
+                    <a class="nav-link" href="https://github.com/kadirbelkuyu/datazone" target="blank">Github</a>
+                    <a class="nav-link" href="/contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row" style="height: 900%; width: 120%;">
+              <div class="col">
+                <div class="folium-map leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" id="map_9b6b072bb332441a9697ca98a7e0acc6">
+                    <script>
+                        L_NO_TOUCH = false;
+                        L_DISABLE_3D = false;
+                    </script>
+                    
+                    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+                    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+                    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+                    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+                    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+                    
+                        <meta name="viewport" content="width=device-width,
+                            initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                        <style>
+                            #map_9b6b072bb332441a9697ca98a7e0acc6 {
+                                position: relative;
+                                width: 100.0%;
+                                height: 100.0%;
+                                left: 0.0%;
+                                top: 0.0%;
+                            }
+                        </style>
+                    
+                    </head>
+                    <body>    
+                    
+                        <div class="folium-map" id="map_9b6b072bb332441a9697ca98a7e0acc6" ></div>
+                    
+                    </body>
+                    <script>    
+                    
+                        var map_9b6b072bb332441a9697ca98a7e0acc6 = L.map(
+                            "map_9b6b072bb332441a9697ca98a7e0acc6",
+                            {
+                                
+                                center: [38.00, 32.00],
+                                crs: L.CRS.EPSG3857,
+                                zoom: 11,
+                                zoomControl: true,
+
+                            }
+                        );
+                    
+                       
+                    
+                    
+                        
+                        var tile_layer_1933015da80a459e84518c2d9c5daec1 = L.tileLayer(
+                            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                            {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                        var marker_916454dae23848d9aff466053d6d5bf1 = L.marker(
+                            [47.5112, -122.257],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_8811b5df3dc74dbaa746c3a966541beb = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_7e0a3f787b874b9aa478ba74746ad204 = $(`<div id="html_7e0a3f787b874b9aa478ba74746ad204" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_8811b5df3dc74dbaa746c3a966541beb.setContent(html_7e0a3f787b874b9aa478ba74746ad204);
+                    
+                    
+                    marker_916454dae23848d9aff466053d6d5bf1.bindPopup(popup_8811b5df3dc74dbaa746c3a966541beb)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_916454dae23848d9aff466053d6d5bf1.bindTooltip(
+                            `<div>
+                                 Sold on 10/13/2014
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_b1f4ebffd08d44c39598f1d1fc08b9e3 = L.marker(
+                            [47.721000000000004, -122.319],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_320674e3d8f94c61b5fa330e7fd925c8 = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_127e2cb178484d8ba52df3aa812ab05a = $(`<div id="html_127e2cb178484d8ba52df3aa812ab05a" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_320674e3d8f94c61b5fa330e7fd925c8.setContent(html_127e2cb178484d8ba52df3aa812ab05a);
+                    
+                    
+                    marker_b1f4ebffd08d44c39598f1d1fc08b9e3.bindPopup(popup_320674e3d8f94c61b5fa330e7fd925c8)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_b1f4ebffd08d44c39598f1d1fc08b9e3.bindTooltip(
+                            `<div>
+                                 Sold on 12/9/2014
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_91640a041aab451580958def347979a2 = L.marker(
+                            [47.7379, -122.23299999999999],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_0c8ac5f4ce804d209993ab48cb7f2e06 = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_2c1c88f33cc94bd8a912fd6b2a30889a = $(`<div id="html_2c1c88f33cc94bd8a912fd6b2a30889a" style="width: 100.0%; height: 100.0%;"><i>House with 2 bedrooms</i></div>`)[0];
+                        popup_0c8ac5f4ce804d209993ab48cb7f2e06.setContent(html_2c1c88f33cc94bd8a912fd6b2a30889a);
+                    
+                    
+                    marker_91640a041aab451580958def347979a2.bindPopup(popup_0c8ac5f4ce804d209993ab48cb7f2e06)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_91640a041aab451580958def347979a2.bindTooltip(
+                            `<div>
+                                 Sold on 2/25/2015
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_5977bb11cdc243c9a230e060f2b2ea64 = L.marker(
+                            [37.881853, 32.489888],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_902d5e1ee6064b1981b330ee86b26a1d = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_d144f317124f4eed80bae54cc79d1235 = $(`<div id="html_d144f317124f4eed80bae54cc79d1235" style="width: 100.0%; height: 100.0%;"><i>House with 4 bedrooms</i></div>`)[0];
+                        popup_902d5e1ee6064b1981b330ee86b26a1d.setContent(html_d144f317124f4eed80bae54cc79d1235);
+                    
+                    
+                    marker_5977bb11cdc243c9a230e060f2b2ea64.bindPopup(popup_902d5e1ee6064b1981b330ee86b26a1d)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_5977bb11cdc243c9a230e060f2b2ea64.bindTooltip(
+                            `<div>
+                                 Sold on 12/9/2014
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_bcd48febfe9a4c9a946d7175f65c8160 = L.marker(
+                            [47.6168, -122.045],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_d5285fd4a7364aeea4732f05f84557c3 = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_0db261f459294a8691af0c07f1d1232d = $(`<div id="html_0db261f459294a8691af0c07f1d1232d" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_d5285fd4a7364aeea4732f05f84557c3.setContent(html_0db261f459294a8691af0c07f1d1232d);
+                    
+                    
+                    marker_bcd48febfe9a4c9a946d7175f65c8160.bindPopup(popup_d5285fd4a7364aeea4732f05f84557c3)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_bcd48febfe9a4c9a946d7175f65c8160.bindTooltip(
+                            `<div>
+                                 Sold on 2/18/2015
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_c2026e996a1243fa8737adf44d5b9e93 = L.marker(
+                            [47.6561, -122.005],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_322942ab516d46c2b21b9d12803864d6 = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_40054b90dfbe44428e199c5411c7e3b7 = $(`<div id="html_40054b90dfbe44428e199c5411c7e3b7" style="width: 100.0%; height: 100.0%;"><i>House with 4 bedrooms</i></div>`)[0];
+                        popup_322942ab516d46c2b21b9d12803864d6.setContent(html_40054b90dfbe44428e199c5411c7e3b7);
+                    
+                    
+                    marker_c2026e996a1243fa8737adf44d5b9e93.bindPopup(popup_322942ab516d46c2b21b9d12803864d6)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_c2026e996a1243fa8737adf44d5b9e93.bindTooltip(
+                            `<div>
+                                 Sold on 5/12/2014
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_352ac3e9d3fc4cdb81743267b0d0a3fe = L.marker(
+                            [47.3097, -122.32700000000001],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_5f6f1b9107784768b8d0ac9f94ef6a9a = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_c81236060fb946df8e2d23436e73cfa8 = $(`<div id="html_c81236060fb946df8e2d23436e73cfa8" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_5f6f1b9107784768b8d0ac9f94ef6a9a.setContent(html_c81236060fb946df8e2d23436e73cfa8);
+                    
+                    
+                    marker_352ac3e9d3fc4cdb81743267b0d0a3fe.bindPopup(popup_5f6f1b9107784768b8d0ac9f94ef6a9a)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_352ac3e9d3fc4cdb81743267b0d0a3fe.bindTooltip(
+                            `<div>
+                                 Sold on 6/27/2014
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_e16c5da5bd08427da941ae185e006486 = L.marker(
+                            [47.4095, -122.315],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_a05f69014ee74b07ab7d3bdbba9149ff = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_1d754750030240dfae2bab7b36824993 = $(`<div id="html_1d754750030240dfae2bab7b36824993" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_a05f69014ee74b07ab7d3bdbba9149ff.setContent(html_1d754750030240dfae2bab7b36824993);
+                    
+                    
+                    marker_e16c5da5bd08427da941ae185e006486.bindPopup(popup_a05f69014ee74b07ab7d3bdbba9149ff)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_e16c5da5bd08427da941ae185e006486.bindTooltip(
+                            `<div>
+                                 Sold on 1/15/2015
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_36f3a08fd8d1473882c849b8a08aea29 = L.marker(
+                            [47.5123, -122.337],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_797d2a97b8cd430fba394a9bfd6f1076 = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_e2ffe38a1699469fbb9d040b5b5592de = $(`<div id="html_e2ffe38a1699469fbb9d040b5b5592de" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_797d2a97b8cd430fba394a9bfd6f1076.setContent(html_e2ffe38a1699469fbb9d040b5b5592de);
+                    
+                    
+                    marker_36f3a08fd8d1473882c849b8a08aea29.bindPopup(popup_797d2a97b8cd430fba394a9bfd6f1076)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_36f3a08fd8d1473882c849b8a08aea29.bindTooltip(
+                            `<div>
+                                 Sold on 4/15/2015
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_44fe17d2a5304c2c8a252ac43517b8a9 = L.marker(
+                            [47.3684, -122.031],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_0377c05688b44372a5a82991d0e2746f = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_bb8569cb04f8478aa1cbaa602b8bf593 = $(`<div id="html_bb8569cb04f8478aa1cbaa602b8bf593" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_0377c05688b44372a5a82991d0e2746f.setContent(html_bb8569cb04f8478aa1cbaa602b8bf593);
+                    
+                    
+                    marker_44fe17d2a5304c2c8a252ac43517b8a9.bindPopup(popup_0377c05688b44372a5a82991d0e2746f)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_44fe17d2a5304c2c8a252ac43517b8a9.bindTooltip(
+                            `<div>
+                                 Sold on 3/12/2015
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    
+                        var marker_897f84dc522e40a58093c855b6a8202c = L.marker(
+                            [47.6007, -122.145],
+                            {}
+                        ).addTo(map_9b6b072bb332441a9697ca98a7e0acc6);
+                    
+                    
+                    var popup_4ce0344408b44b529bec9ecec298d326 = L.popup({"maxWidth": "100%"});
+                    
+                    
+                        var html_9020d9ab9b6b4db1a1b73895b9b85412 = $(`<div id="html_9020d9ab9b6b4db1a1b73895b9b85412" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
+                        popup_4ce0344408b44b529bec9ecec298d326.setContent(html_9020d9ab9b6b4db1a1b73895b9b85412);
+                    
+                    
+                    marker_897f84dc522e40a58093c855b6a8202c.bindPopup(popup_4ce0344408b44b529bec9ecec298d326)
+                    ;
+                    
+                    
+                    
+                    
+                        marker_897f84dc522e40a58093c855b6a8202c.bindTooltip(
+                            `<div>
+                                 Sold on 4/3/2015
+                             </div>`,
+                            {"sticky": true}
+                        );
+                    
+                    </script>
+                </div>
+              </div>
+              <div class="col">
+                2 of 2
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                1 of 3
+              </div>
+              <div class="col">
+                2 of 3
+              </div>
+              <div class="col">
+                3 of 3
+              </div>
+            </div>
+          </div>
+
+        
+    </div>
+
+</body>
+<footer class="mastfoot mt-auto">
+    <div class="inner">
+        <p>© DATAZONE</p>
+    </div>
+</footer>
+</html>

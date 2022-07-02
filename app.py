@@ -6,7 +6,7 @@ from flask import Flask, render_template
 from v4toclass import getMap
 DEVELOPMENT_ENV  = True
 from bar import get_barchar
-import streamlit as st
+
 
 app = Flask(__name__)
 
@@ -30,6 +30,14 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html', app_data=app_data)
+    
+
+
+@app.route('/camera')
+def camera():
+    return render_template('camera.html', app_data=app_data)
+
+
 
 @app.route('/analiz')
 def analiz():
@@ -50,4 +58,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=DEVELOPMENT_ENV)
