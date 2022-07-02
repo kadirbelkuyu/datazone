@@ -6,7 +6,10 @@ from flask import Flask, render_template
 from v4toclass import getMap
 DEVELOPMENT_ENV  = True
 from bar import get_barchar
-
+import folium
+import os
+import random
+import shutil
 
 app = Flask(__name__)
 
@@ -36,6 +39,12 @@ def about():
 @app.route('/camera')
 def camera():
     return render_template('camera.html', app_data=app_data)
+
+
+
+@app.route('/yedek2')
+def yedek2():
+    return render_template('yedek2.html', app_data=app_data)
 
 
 
