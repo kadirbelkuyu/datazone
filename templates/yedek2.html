@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -42,13 +42,12 @@
                 </nav>
             </div>
         </header>
-
         <div class="container">
-            <div class="row" style="height: 900%; width: 90%;">
+            <div class="row">
                 <div class="col">
                     <div class="folium-map leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag"
                         id="map">
-                     
+
 
                         <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
                         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -64,9 +63,11 @@
                             href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
                         <!-- Custom styles for this template -->
                         <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
-</head>
+        </head>
 
 <body class="text-center">
+
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -90,58 +91,59 @@
 
     <meta name="viewport" content="width=device-width,
                             initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
-    
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css" /
 
-   
+    <div class="container" >
+        <div class="row">
+            
+            <div class="col-sm" style="height:30em; width:auto ;padding-left: 120%;">
+                <script>
 
-    <div class="row">
-        <div class="col-sm" style="height:400px; width: 400%;">
-            <script>
+                    var map = L.map('map').setView([37.88, 32.50], 15);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',).addTo(map);
 
-                var map = L.map('map').setView([37.88, 32.50], 15);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',).addTo(map);
+                    var marker_916454dae23848d9aff466053d6d5bf1 = L.marker(
+                        [37.881853, 32.489888],
+                        {}
+                    ).addTo(map);
 
-                var marker_916454dae23848d9aff466053d6d5bf1 = L.marker(
-                    [37.881853, 32.489888],
-                    {}
-                ).addTo(map);
-        
-        
-                var popup_8811b5df3dc74dbaa746c3a966541beb = L.popup({ "maxWidth": "100%" });
-        
-        
-                var html_7e0a3f787b874b9aa478ba74746ad204 = $(`<div id="html_7e0a3f787b874b9aa478ba74746ad204" style="width: 100.0%; height: 100.0%;"><i>House with 3 bedrooms</i></div>`)[0];
-                popup_8811b5df3dc74dbaa746c3a966541beb.setContent(html_7e0a3f787b874b9aa478ba74746ad204);
-        
-        
-                marker_916454dae23848d9aff466053d6d5bf1.bindPopup(popup_8811b5df3dc74dbaa746c3a966541beb)
-                    ;
-        
-        
-        
-        
-                marker_916454dae23848d9aff466053d6d5bf1.bindTooltip(
-                    `<div>
-                                         Sold on 10/13/2014
-                                     </div>`,
-                    { "sticky": true }
-                );
-        
-        
-            </script>
-        </div>
-        <div class="col-sm">
-            2 of 3
-        </div>
-        <div class="col-sm">
-            3 of 3
+
+                    var popup_8811b5df3dc74dbaa746c3a966541beb = L.popup({ "maxWidth": "100%" });
+
+
+                    var html_7e0a3f787b874b9aa478ba74746ad204 = $(`<div id="html_7e0a3f787b874b9aa478ba74746ad204" style="width: 100.0%; height: 100.0%;">Sille Mobese Kaydı</div>`)[0];
+                    popup_8811b5df3dc74dbaa746c3a966541beb.setContent(html_7e0a3f787b874b9aa478ba74746ad204);
+
+
+                    marker_916454dae23848d9aff466053d6d5bf1.bindPopup(popup_8811b5df3dc74dbaa746c3a966541beb)
+                        ;
+
+
+
+
+                    marker_916454dae23848d9aff466053d6d5bf1.bindTooltip(
+                        `<div>
+                                             Sille Kavşağı
+                                         </div>`,
+                        { "sticky": true }
+                    );
+
+
+                </script>
+            </div>
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+                3 of 3
+            </div>
         </div>
     </div>
+
 
 </body>
 

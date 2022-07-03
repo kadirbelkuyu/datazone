@@ -41,10 +41,14 @@ def camera():
     return render_template('camera.html', app_data=app_data)
 
 
+@app.route('/yedek')
+def yedek():
+    return render_template('yedek.html', app_data=app_data)
 
 @app.route('/yedek2')
 def yedek2():
-    return render_template('yedek2.html', app_data=app_data)
+    map = getMap.getmap()
+    return map._repr_html_()
 
 
 
