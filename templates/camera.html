@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>DataZone - Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">DataZone</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="">Home</a>
+                    <a class="nav-link" href="https://github.com/kadirbelkuyu/datazone" target="blank">Github</a>
+                    <a class="nav-link" href="/contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="div1">
+            <style>
+                #video-overlay{
+                    display: none;
+                }
+            </style>
+            <video autoplay playsinline muted loop width="80%" height="auto%" controls style="pointer-events: none; position: absolute;">
+                <source src={{ url_for('static', filename="final.mp4" ) }} type="video/mp4">
+              </video>
+        </div> 
+
+        <div class="div2"> 
+            
+        </div>
+
+        <div class="div3"> </div>
+    </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
+
+
+
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .div1 {
+            grid-area: 1 / 1 / 3 / 3;
+        }
+
+        .div2 {
+            grid-area: 1 / 4 / 3 / 6;
+        }
+
+        .div3 {
+            grid-area: 4 / 2 / 6 / 5;
+        }
+    </style>
+
+
+</body>
+
+</html>

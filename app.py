@@ -10,6 +10,7 @@ import folium
 import os
 import random
 import shutil
+import time
 
 app = Flask(__name__)
 
@@ -48,7 +49,9 @@ def yedek():
 @app.route('/yedek2')
 def yedek2():
     map = getMap.getmap()
+    
     return map._repr_html_()
+    
 
 
 
