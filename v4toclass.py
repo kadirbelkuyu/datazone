@@ -256,7 +256,9 @@ class getMap:
         folium.PolyLine(altKoord).add_to(altYol)
 
         sayac=0
-        kaza_durumu=True
+
+        kaza_durumu=False
+
         def kaza():
             normalYol.show=False
             altYol.show=True
@@ -307,45 +309,6 @@ class getMap:
         scheduler.start()
         atexit.register(lambda: scheduler.shutdown())
 
-
-        kaza_durumu = False
-
-        def kaza():
-            normalYol.show = False
-            altYol.show = True
-            mobeseSille.show = True
-            JsButton(
-                title='<i class="fas fa-crosshairs"></i>', function="""
-                        function(btn, map) {
-                            map.setView([37.871540, 32.498914],12);
-                            btn.state('zoom-to-forest');
-                        }
-                        """).add_to(m)
-            JsButton(
-                title='<i class="fas fa-book"></i>', function="""
-                        function(btn, map) {
-                            print()
-                        }
-                        """).add_to(m)
-
-        def normal():
-            JsButton(
-                title='<i class="fas fa-crosshairs"></i>', function="""
-                        function(btn, map) {
-                            map.setView([37.871540, 33.498914],12);
-                            btn.state('zoom-to-forest');
-                        }
-                        """).add_to(m)
-            JsButton(
-                title='<i class="fas fa-book"></i>', function="""
-                        function(btn, map) {
-                            print()
-                        }
-                        """).add_to(m)
-        if kaza_durumu:
-            kaza()
-        else:
-            normal()
         # Add marker cluster to map
         marker_cluster.add_to(trafik_isik)
         folium.LayerControl().add_to(m)
