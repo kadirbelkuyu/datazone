@@ -244,11 +244,6 @@ class getMap:
             name="mobeseSille", show=False).add_to(m)
         folium.Marker(location=[37.881853, 32.489888],
                       icon=folium.Icon(color="red", icon='warning ', prefix='fa')).add_to(mobeseSille)
-<<<<<<< HEAD
-        #mobeseSille.show=True;
-=======
-        # mobeseSille.show=True;
->>>>>>> main
 
         normalYol = folium.FeatureGroup(name="normalYol").add_to(m)
         normalKoord = ((37.891476, 32.497210), (37.887738, 32.495195), (37.884545, 32.491740), (37.880899, 32.488906),
@@ -259,7 +254,7 @@ class getMap:
         altKoord = ((37.888341, 32.495430), (37.887774, 32.495054), (37.888358, 32.493831), (37.887367, 32.493069), (37.886454, 32.492594), (37.885248, 32.491175),
                     (37.884854, 32.490637), (37.883766, 32.489772), (37.883476, 32.489862), (37.882333, 32.489039))
         folium.PolyLine(altKoord).add_to(altYol)
-<<<<<<< HEAD
+
         sayac=0
         kaza_durumu=True
         def kaza():
@@ -311,7 +306,7 @@ class getMap:
         running_job = scheduler.add_job(normal, 'interval', seconds=15, max_instances=1)
         scheduler.start()
         atexit.register(lambda: scheduler.shutdown())
-=======
+
 
         kaza_durumu = False
 
@@ -332,7 +327,6 @@ class getMap:
                             print()
                         }
                         """).add_to(m)
->>>>>>> main
 
         def normal():
             JsButton(
