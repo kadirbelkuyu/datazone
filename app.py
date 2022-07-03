@@ -34,7 +34,7 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html', app_data=app_data)
-    
+
 
 
 @app.route('/camera')
@@ -49,10 +49,8 @@ def yedek():
 @app.route('/yedek2')
 def yedek2():
     map = getMap.getmap()
-    
-    return map._repr_html_()
-    
 
+    return map._repr_html_()
 
 
 @app.route('/analiz')
