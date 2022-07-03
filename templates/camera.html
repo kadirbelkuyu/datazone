@@ -45,6 +45,7 @@
 <body>
     <div class="parent">
         <div class="div1">
+<<<<<<< HEAD
             <iframe id="ayar1" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=32.47698068618775%2C37.86729879601652%2C32.507107257843025%2C37.88418547009292&amp;layer=cyclemap&amp;marker=37.881853%2C32.489888"
                 style="border: 1px solid black"></iframe><br />
@@ -53,6 +54,22 @@
                 style="border: 1px solid black"></iframe><br />
         </div>
         <div class="div2"> </div>
+=======
+            <style>
+                #video-overlay{
+                    display: none;
+                }
+            </style>
+            <video autoplay playsinline muted loop width="80%" height="auto%" controls style="pointer-events: none; position: absolute;">
+                <source src={{ url_for('static', filename="final.mp4" ) }} type="video/mp4">
+              </video>
+        </div> 
+
+        <div class="div2"> 
+            
+        </div>
+
+>>>>>>> main
         <div class="div3"> </div>
     </div>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
@@ -84,4 +101,8 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> main

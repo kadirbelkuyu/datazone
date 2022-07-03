@@ -19,6 +19,8 @@ from folium_jsbutton import JsButton
 import geopandas
 import overpy
 import time
+
+
 class getMap:
     def __init__(self):
         # Import data from EarthPy
@@ -238,20 +240,26 @@ class getMap:
 
         # YENİ ALAN
 
-        mobeseSille = folium.FeatureGroup(name="mobeseSille", show=False).add_to(m)
+        mobeseSille = folium.FeatureGroup(
+            name="mobeseSille", show=False).add_to(m)
         folium.Marker(location=[37.881853, 32.489888],
                       icon=folium.Icon(color="red", icon='warning ', prefix='fa')).add_to(mobeseSille)
+<<<<<<< HEAD
         #mobeseSille.show=True;
+=======
+        # mobeseSille.show=True;
+>>>>>>> main
 
         normalYol = folium.FeatureGroup(name="normalYol").add_to(m)
-        normalKoord=((37.891476, 32.497210),(37.887738, 32.495195),(37.884545, 32.491740), (37.880899, 32.488906),
-        (37.879452, 32.487855))
+        normalKoord = ((37.891476, 32.497210), (37.887738, 32.495195), (37.884545, 32.491740), (37.880899, 32.488906),
+                       (37.879452, 32.487855))
         folium.PolyLine(normalKoord).add_to(normalYol)
 
         altYol = folium.FeatureGroup(name="altYol", show=False).add_to(m)
-        altKoord = ((37.888341, 32.495430), (37.887774, 32.495054) , (37.888358, 32.493831), (37.887367, 32.493069), (37.886454, 32.492594),(37.885248, 32.491175),
-        (37.884854, 32.490637), (37.883766, 32.489772),(37.883476, 32.489862), (37.882333, 32.489039))
+        altKoord = ((37.888341, 32.495430), (37.887774, 32.495054), (37.888358, 32.493831), (37.887367, 32.493069), (37.886454, 32.492594), (37.885248, 32.491175),
+                    (37.884854, 32.490637), (37.883766, 32.489772), (37.883476, 32.489862), (37.882333, 32.489039))
         folium.PolyLine(altKoord).add_to(altYol)
+<<<<<<< HEAD
         sayac=0
         kaza_durumu=True
         def kaza():
@@ -303,9 +311,48 @@ class getMap:
         running_job = scheduler.add_job(normal, 'interval', seconds=15, max_instances=1)
         scheduler.start()
         atexit.register(lambda: scheduler.shutdown())
+=======
 
+        kaza_durumu = False
+
+        def kaza():
+            normalYol.show = False
+            altYol.show = True
+            mobeseSille.show = True
+            JsButton(
+                title='<i class="fas fa-crosshairs"></i>', function="""
+                        function(btn, map) {
+                            map.setView([37.871540, 32.498914],12);
+                            btn.state('zoom-to-forest');
+                        }
+                        """).add_to(m)
+            JsButton(
+                title='<i class="fas fa-book"></i>', function="""
+                        function(btn, map) {
+                            print()
+                        }
+                        """).add_to(m)
+>>>>>>> main
+
+        def normal():
+            JsButton(
+                title='<i class="fas fa-crosshairs"></i>', function="""
+                        function(btn, map) {
+                            map.setView([37.871540, 33.498914],12);
+                            btn.state('zoom-to-forest');
+                        }
+                        """).add_to(m)
+            JsButton(
+                title='<i class="fas fa-book"></i>', function="""
+                        function(btn, map) {
+                            print()
+                        }
+                        """).add_to(m)
+        if kaza_durumu:
+            kaza()
+        else:
+            normal()
         # Add marker cluster to map
         marker_cluster.add_to(trafik_isik)
-
         folium.LayerControl().add_to(m)
         return m
